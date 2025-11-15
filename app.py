@@ -28,9 +28,10 @@ def submit():
     features = np.array([[Pclass, Sex, Age, SibSp, Parch, Fare, Embarked, Age_Group]])
     prediction = model.predict(features)
 
-    
-
-
+    if Sex=="male":
+        Sex=0
+    else:
+        Sex=1
     return render_template("result.html", Pclass=Pclass,
                             Sex=Sex, 
                             Age=Age, 
