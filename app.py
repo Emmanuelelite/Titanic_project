@@ -32,6 +32,12 @@ def submit():
         Sex=0
     else:
         Sex=1
+    if Pclass=="1st Class":
+        Pclass=1
+    elif Pclass=="2nd Class":
+        Pclass=2
+    else:
+        Pclass=3
     return render_template("result.html", Pclass=Pclass,
                             Sex=Sex, 
                             Age=Age, 
