@@ -39,6 +39,12 @@ def submit():
         Pclass=2
     else:
         Pclass=3
+    if Embarked=="Cherbourg":
+        Embarked=0
+    elif Embarked=="Queenstown":
+        Embarked=1
+    else:
+        Embarked=2  
     return render_template("result.html", Pclass=Pclass,
                             Sex=Sex, 
                             Age=Age, 
